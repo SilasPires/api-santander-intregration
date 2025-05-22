@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-export async function GET(request: NextRequest) {
-  const body = await request.json()
-  console.log('🔎 Validação GET recebida do Santander')
-  console.log('Webhook:', body)
-  return NextResponse.json({ message: '✅ Webhook ativo e validado com GET' })
+export async function GET() {
+  console.log('Validação GET recebida do Santander')
+
+  return NextResponse.json(
+    { message: 'Webhook ativo e validado com GET' },
+    { status: 200 }
+  )
 }
 
 export async function POST(request: NextRequest) {
