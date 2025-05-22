@@ -40,6 +40,7 @@ export default function App() {
   }
 
   const updateAccessToken = async () => {
+    setError('')
     try {
       const res = await fetch('/api/santander-auth', {
         method: 'POST',
@@ -227,7 +228,7 @@ export default function App() {
 
             <button
               onClick={() => navigator.clipboard.writeText(payload)}
-              className="mt-3 px-3 py-1 bg-gray-200 hover:bg-gray-300 text-gray-800 text-sm rounded"
+              className="cursor-pointer mt-3 px-3 py-1 bg-gray-200 hover:bg-gray-300 text-gray-800 text-sm rounded"
             >
               Copiar Payload
             </button>
