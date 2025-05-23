@@ -30,7 +30,7 @@ export async function POST() {
     const agent = new https.Agent({
       cert,
       key,
-      rejectUnauthorized: false, // DEIXAR true em produção
+      rejectUnauthorized: true, // Deixar true em produção
     })
 
     const params = new URLSearchParams()

@@ -42,7 +42,7 @@ export async function GET(req: Request) {
     const agent = new https.Agent({
       cert,
       key,
-      rejectUnauthorized: false, // DEIXAR true em produção
+      rejectUnauthorized: true, // Deixar true em produção
     })
 
     const headers = {
